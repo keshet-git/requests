@@ -1,0 +1,14 @@
+import request
+
+url = "https://the-cocktail-db.p.rapidapi.com/search.php"
+
+querystring = {"i":"vodka"}
+
+headers = {
+    'x-rapidapi-key': "f138806c43msh3b687f6944deec7p1fd922jsna79b7d9f1df4",
+    'x-rapidapi-host': "the-cocktail-db.p.rapidapi.com"
+    }
+
+response = request("GET", url, headers=headers, params=querystring)
+
+print(response.text)
